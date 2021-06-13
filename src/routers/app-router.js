@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req,res) => {
-   res.json({nessage: "Welcome to Art Meseum App"});
-});
+const appController = require('../controllers/app-controller');
+
+router.get('/', appController.welcomeApp);
 
 module.exports = router;
