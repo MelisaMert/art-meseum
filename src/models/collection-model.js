@@ -9,13 +9,6 @@ const collectionSchema = new Schema({
         minLength: 3,
         maxLength: 50
     },
-    name: {
-        type: String,
-        trim: true,
-        lowercase: true,
-        minLength: 3,
-        maxLength: 50
-    },
     title: {
         type: String,
         trim: true,
@@ -30,7 +23,7 @@ const collectionSchema = new Schema({
        minLength: 3,
        maxLength: 50
     },
-    artistDisplayName: {
+    artist: {
         type: String,
         trim: true,
         lowercase: true,
@@ -43,10 +36,10 @@ const collectionSchema = new Schema({
     artistBeginEnd: {
         type: Number
     },
-    acessionYear: {
-        type:Number
+    accessionNumber: {
+        type: Number
     },
-    objectDate: {
+    date: {
         type: Number
     },
     repository: {
@@ -55,12 +48,23 @@ const collectionSchema = new Schema({
         minLength: 3,
         maxLength: 50
     },
-    accessionNumber: {
-        type: Number
-    },
     isHighlight: {
        type: Boolean,
        default: false
+    },
+    culture: {
+        type: String,
+        trim: true,
+        lowercase: true,
+        minLength: 3,
+        maxLength: 50
+    },
+    classification: {
+     type:String,
+     trim: true,
+     lowercase: true,
+     minLength: 3,
+     maxLength: 50
     }
   },{ collection: 'Collection', timestamps: true }
 )

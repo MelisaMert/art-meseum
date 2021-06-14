@@ -1,0 +1,13 @@
+.navbar-item img{
+    width: 150px;
+    height: 150px;
+    max-height: 150px;
+}
+
+.button.is-primary {
+  background-color: darkslategrey !important;
+}
+
+.is-primary.input {
+   border-color: darkslategrey !important;
+}
