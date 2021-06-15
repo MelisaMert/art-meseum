@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: true}));
 app.use('/', appRouter)
 app.use('/api/collection', collectionRouter);
 
-app.listen(3000,() => {
-    console.log('Server running in 3000 port');
+app.listen(3008,() => {
+    console.log('Server running in 3005 port');
 })
 

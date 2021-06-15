@@ -1,2 +1,10 @@
 <%- include('../partials/_header') %> 
 
+<div class="columns is-multiline">
+   <% collections.forEach(collection => { %>
+         <div class="column is-6">
+             <%- include('../partials/_collection-card',{collection: collection}) %> 
+         </div>
+   <% }) %>
+
+</div>

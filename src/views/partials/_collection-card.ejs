@@ -1,0 +1,31 @@
+<% 
+const fimgSource  = collection.imgSource;
+console.log('Img Source', fimgSource);
+%> 
+
+
+
+<div class="card">
+   <div class="card-image">
+       <figure class= "image is4by3">
+        <img src=<%= collection.imgSource  %>  alt="Placeholder" />
+       </figure>
+   </div>
+
+   <div class="card-content">
+      <div class="media">
+          <div class="media-left">
+              <figure class="image is-48x48">
+              <img src="https://i.pinimg.com/originals/e9/3d/c0/e93dc0675eab41c25137ea4930b0fa1f.png" alt="Placeholder image"/>
+              </figure>
+          </div>
+
+          <div class="media-content">
+          <p class="title is-4"> <%- collection.title %>  </p>
+        </div>
+
+      </div>
+   </div>
+
+   <a href="/api/collection/detail">Read More</a>
+</div>

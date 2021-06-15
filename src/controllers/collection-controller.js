@@ -5,6 +5,11 @@ const listAllCollection = async (req,res) => {
     res.render('./collections/index',{collections: allCollection});
 }
 
+const getCollectionDetail = async(req,res) => {
+    res.json({message: "collection detail"});
+}
+
 module.exports = {
-    listAllCollection
+    listAllCollection,
+    getCollectionDetail
 }

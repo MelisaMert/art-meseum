@@ -65,6 +65,13 @@ const collectionSchema = new Schema({
      lowercase: true,
      minLength: 3,
      maxLength: 50
+    },
+    imgSource: {
+     type:String,
+     trim: true,
+     lowercase:true,
+     minLength: 3,
+     maxLength: 50
     }
   },{ collection: 'Collection', timestamps: true }
 )

@@ -4,4 +4,6 @@ const collectionController = require('../controllers/collection-controller');
 
 router.get('/', collectionController.listAllCollection);
 
+router.get('/detail', collectionController.getCollectionDetail);
+
 module.exports = router;
