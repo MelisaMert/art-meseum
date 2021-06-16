@@ -1,22 +1,30 @@
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-   
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
+      <a class="navbar-item" href="/api/collection">
         <img src="https://thumbs.dreamstime.com/b/museum-logo-trendy-minimal-linear-style-vector-icon-bank-building-columns-simple-emblem-university-isolated-177740902.jpg" width="90" height="90" >
       </a>
-      
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
     </div>
-  
+    
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-end">
+        <% if (isCreateCollection !== true) { %>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="/api/collection">
+              News
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="/api/collection/create">
+                 New Collection
+              </a>
+              <a class="navbar-item" href="/api/collection">
+                Modifiers
+              </a>
+              </div>
+          </div>
+          <% } %>
         <div class="navbar-item">
-          <form action="/blog" method="post" >
+          <form action="/collection" method="post" >
             <div class="field has-addons">
               <div class="control">
                 <input class="input is-primary" type="text" name="search" placeholder="Search Collection">
@@ -29,6 +37,10 @@
           </form>
         </div>
       </div>
+   
+   
+    
+    
     </div>
     </div>
 </nav>
