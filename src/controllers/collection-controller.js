@@ -6,7 +6,8 @@ const listAllCollection = async (req,res) => {
 }
 
 const getCollectionDetail = async(req,res) => {
-    res.json({message: "collection detail"});
+    const collection = await Collection.findById({_id: req.params.collectionId});
+    res.render('./collections/collection', {collection: collection})
 }
 
 module.exports = {

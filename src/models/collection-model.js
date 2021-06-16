@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const Joi = require('@hapi/joi');
 
 const collectionSchema = new Schema({
-    deparment: {
+    department: {
         type: String,
         trim: true,
         minLength: 3,
