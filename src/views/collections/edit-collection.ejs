@@ -1,0 +1,68 @@
+<%- include('../partials/_header', {isCreateCollection: false}) %>
+
+    <body>
+        <form action="/api/collection/edit/<%-collectionId %>" method="post">
+
+            <div class="columns">
+                <div class="column is-8 is-offset-2">
+                    <div class="field">
+                        <label class="label">Title</label>
+                        <div class="control">
+                            <input class="input" name="title" type="text" value=<%-collection.title %> />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Department</label>
+                        <div class="control">
+                            <input class="input" name="culture" type="text" value=<%- collection.department %> />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Repository</label>
+                        <div class="control">
+                            <input class="input" name="repository" type="text" value=<%- collection.repository %> />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Artist Role</label>
+                        <div class="control">
+                            <input class="input" name="artist" type="text" value=<%- collection.artistRole %> />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Artist</label>
+                        <div class="control">
+                            <input class="input" name="artist" disabled type="text" value=<%- collection.artist %> />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Classification</label>
+                        <div class="control">
+                            <input class="input" name="classification" type="text" value=<%- collection.classification
+                                %> />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Date</label>
+                        <div class="control">
+                            <input class="input" name="culture" type="text" disabled value=<%- collection.date %> />
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-link" type="submit">Submit</button>
+                        </div>
+                        <div class="control">
+                            <button class="button is-link is-light">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>

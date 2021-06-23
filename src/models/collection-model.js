@@ -5,28 +5,22 @@ const Joi = require('@hapi/joi');
 const collectionSchema = new Schema({
     department: {
         type: String,
-        trim: true,
         minLength: 3,
         maxLength: 50
     },
     title: {
         type: String,
-        trim: true,
-        lowercase: true,
         minLength: 3,
-        maxLength: 50
+        maxLength: 150
     },
     artistRole: {
        type: String,
        trim: true,
-       lowercase: true,
        minLength: 3,
        maxLength: 50
     },
     artist: {
         type: String,
-        trim: true,
-        lowercase: true,
         minLength: 3,
         maxLength: 50
     },
@@ -44,7 +38,6 @@ const collectionSchema = new Schema({
     },
     repository: {
         type: String,
-        trim: true,
         minLength: 3,
         maxLength: 50
     },

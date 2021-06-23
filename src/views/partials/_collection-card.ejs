@@ -1,12 +1,7 @@
-<% 
-const fimgSource  = collection.imgSource;
-console.log('Collection', collection._id);
-%> 
-
-<div class="card" style= "height: 480px;">
+<div class="card">
    <div class="card-image">
     <figure class= "image is4by3">
-        <a href="/api/collection/<%= collection._id%>"><img src=<%= collection.imgSource  %>  alt="Placeholder"  /></a>
+       <a href="/api/collection/<%= collection._id%>"><img src=<%= collection.imgSource  %>  alt="Placeholder"  /></a>
         </figure>
    </div>
 
@@ -14,14 +9,23 @@ console.log('Collection', collection._id);
       <div class="media">
           <div class="media-left">
               <figure class="image is-48x48">
-             <img src="https://i.pinimg.com/originals/e9/3d/c0/e93dc0675eab41c25137ea4930b0fa1f.png" alt="Placeholder image"/>
-              </figure>
+               <img src="https://i.pinimg.com/originals/e9/3d/c0/e93dc0675eab41c25137ea4930b0fa1f.png" alt="Placeholder image"/>
+               </figure>
           </div>
 
           <div class="media-content">
           <p class="title is-5"> <%- collection.title %>  </p>
+          <div class="columns">
+            <div class="column is-three-fifths">
+                <button class="button is-light"><a href="/api/collection/edit/<%= collection._id %>">Update</a></button>
+            </div>
+            <div class="column">
+               <form action="/api/collection/delete/<%= collection._id%>" method="post">
+               <button class="button is-danger">Delete</a></button>
+               </form>
+            </div>
+          </div>
         </div>
-
       </div>
    </div>
 </div>

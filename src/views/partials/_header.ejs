@@ -9,19 +9,14 @@
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-end">
         <% if (isCreateCollection !== true) { %>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" href="/api/collection">
-              News
-            </a>
-            <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item" href="/api/collection/create">
-                 New Collection
-              </a>
-              <a class="navbar-item" href="/api/collection">
-                Modifiers
-              </a>
-              </div>
+          <div class="navbar-item">
+            <div class="control">
+              <button class="button is-secondary">
+                <a href="/api/collection/create">New Collection</a>
+              </button>
+           </div>
           </div>
+          
           <% } %>
         <div class="navbar-item">
           <form action="/collection" method="post" >
